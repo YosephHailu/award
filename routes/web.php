@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AwardController;
 use App\Http\Controllers\AwardTypeController;
+use App\Http\Controllers\MovieController;
+use App\Http\Controllers\MusicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +30,6 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard
 Route::resource('awardType', AwardTypeController::class);
 Route::resource('award', AwardController::class);
 Route::get('award/{award}/candidates', [App\Http\Controllers\AwardController::class, 'candidates'])->name('candidates');
+
+Route::resource('music', MusicController::class);
+Route::resource('movie', MovieController::class);

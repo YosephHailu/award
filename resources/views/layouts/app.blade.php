@@ -57,34 +57,29 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('award')}}">
+                            <a class="nav-link" href="{{ url('movie')}}">
                                 <i class="ni ni-planet text-orange"></i>
-                                <span class="nav-link-text">Awards</span>
+                                <span class="nav-link-text">Movies</span>
                             </a>
                         </li>
-
+                        
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('awardType')}}">
+                            <a class="nav-link" href="{{ url('music')}}">
                                 <i class="ni ni-planet text-orange"></i>
-                                <span class="nav-link-text">Award Type</span>
+                                <span class="nav-link-text">Musics</span>
                             </a>
                         </li>
-
                     </ul>
                     <!-- Divider -->
                     <hr class="my-3">
-                    <!-- Heading -->
-                    <h6 class="navbar-heading p-0 text-muted">
-                        <span class="docs-normal">Documentation</span>
-                    </h6>
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
                             <a class="nav-link"
-                                href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html"
+                                href="{{ url('logout')}}"
                                 target="_blank">
                                 <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Getting started</span>
+                                <span class="nav-link-text">Logout</span>
                             </a>
                         </li>
                     </ul>
