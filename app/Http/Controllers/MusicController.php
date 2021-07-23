@@ -56,7 +56,7 @@ class MusicController extends Controller
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('photo')->getClientOriginalExtension();
             $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-            $path = $request->file('photo')->storeAs('rComplaintUploads/', $fileNameToStore);
+            $path = $request->file('photo')->storeAs('public/uploads/music/', $fileNameToStore);
         } else {
             $fileNameToStore = "placeholder.php";
         }
@@ -125,7 +125,7 @@ class MusicController extends Controller
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('photo')->getClientOriginalExtension();
             $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-            $path = $request->file('photo')->storeAs('rComplaintUploads/', $fileNameToStore);
+            $path = $request->file('photo')->storeAs('public/uploads/music/', $fileNameToStore);
         } else {
             $fileNameToStore = $music->image;
         }

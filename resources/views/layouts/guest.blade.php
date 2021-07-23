@@ -1,295 +1,228 @@
-<!--
-=========================================================
-* Argon Dashboard - v1.2.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-
-
-* Copyright  Creative Tim (http://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
-
-
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js">
+
+<!-- homev2_light16:29-->
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
-  <!-- Favicon -->
-  <link rel="icon" href="{{asset('assets/img/brand/favicon.png')}}" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="{{asset('assets/vendor/nucleo/css/nucleo.css')}}" type="text/css">
-  <link rel="stylesheet" href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
-  <!-- Page plugins -->
-  <!-- Argon CSS -->
-  <link rel="stylesheet" href="{{asset('assets/css/argon.css?v=1.2.0')}}" type="text/css">
+  <!-- Basic need -->
+  <title>Open Pediatrics</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="profile" href="#">
+
+  <!--Google Font-->
+  <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+  <!-- Mobile specific meta -->
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone-no">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="{{asset('landing/css/plugins.css')}}">
+  <link rel="stylesheet" href="{{asset('landing/css/style.css')}}">
+
 </head>
 
 <body>
+  <!--preloading-->
+  {{-- <div id="preloader">
+    <img class="logo" src="{{asset('landing/images/logo1.png"')}} alt="" width="119" height="58">
+  <div id="status">
+    <span></span>
+    <span></span>
+  </div>
+  </div> --}}
+  <!--end of preloading-->
+  <!--login form popup-->
+  <div class="login-wrapper" id="login-content">
+    <div class="login-content">
+      <a href="#" class="close">x</a>
+      <h3>Login</h3>
+      <form method="post" action="#">
+        <div class="row">
+          <label for="username">
+            Username:
+            <input type="text" name="username" id="username" placeholder="Hugh Jackman"
+              pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+          </label>
+        </div>
 
-  <!-- Main content -->
-  <div class="main-content" id="panel">
-    <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
+        <div class="row">
+          <label for="password">
+            Password:
+            <input type="password" name="password" id="password" placeholder="******"
+              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+          </label>
+        </div>
+        <div class="row">
+          <div class="remember">
+            <div>
+              <input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
             </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
-          <!-- Navbar links -->
-          <ul class="navbar-nav align-items-center  ml-md-auto ">
-            <li class="nav-item d-xl-none">
-              <!-- Sidenav toggler -->
-              <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                </div>
-              </div>
+            {{-- <a href="#">Forget password ?</a> --}}
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--end of login form popup-->
+  <!--signup form popup-->
+  <div class="login-wrapper" id="signup-content">
+    <div class="login-content">
+      <a href="#" class="close">x</a>
+      <h3>sign up</h3>
+      <form method="post" action="#">
+        <div class="row">
+          <label for="username-2">
+            Username:
+            <input type="text" name="username" id="username-2" placeholder="Hugh Jackman"
+              pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+          </label>
+        </div>
+
+        <div class="row">
+          <label for="email-2">
+            your email:
+            <input type="password" name="email" id="email-2" placeholder=""
+              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+          </label>
+        </div>
+        <div class="row">
+          <label for="password-2">
+            Password:
+            <input type="password" name="password" id="password-2" placeholder=""
+              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+          </label>
+        </div>
+        <div class="row">
+          <label for="repassword-2">
+            re-type Password:
+            <input type="password" name="password" id="repassword-2" placeholder=""
+              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+          </label>
+        </div>
+        <div class="row">
+          <button type="submit">sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--end of signup form popup-->
+
+  <!-- BEGIN | Header -->
+  <header class="ht-header full-width-hd" id="header-light">
+    <div class="row">
+      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header logo">
+          <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <div id="nav-icon1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <a href="{{url('/')}}"><img class="logo" src="{{asset('landing/images/logo2.png')}}" alt="" width="119"
+              height="58"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav flex-child-menu menu-left">
+            <li class="hidden">
+              <a href="#page-top"></a>
             </li>
-            <li class="nav-item d-sm-none">
-              <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
-                <i class="ni ni-zoom-split-in"></i>
+            <li class="dropdown first">
+              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                movies
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="ni ni-bell-55"></i>
+
+            <li class="dropdown first">
+              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                Music
               </a>
-              <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                <!-- Dropdown header -->
-                <div class="px-3 py-3">
-                  <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
-                </div>
-                <!-- List group -->
-                <div class="list-group list-group-flush">
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="{{asset('assets/img/theme/team-1.jpg')}}" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="{{asset('assets/img/theme/team-2.jpg')}}" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>3 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="{{asset('assets/img/theme/team-3.jpg')}}" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>5 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Your posts have been liked a lot.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="{{asset('assets/img/theme/team-4.jpg')}}" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="{{asset('assets/img/theme/team-5.jpg')}}" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>3 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- View all -->
-                <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="ni ni-ungroup"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
-                <div class="row shortcuts px-4">
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">
-                      <i class="ni ni-calendar-grid-58"></i>
-                    </span>
-                    <small>Calendar</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
-                      <i class="ni ni-email-83"></i>
-                    </span>
-                    <small>Email</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-info">
-                      <i class="ni ni-credit-card"></i>
-                    </span>
-                    <small>Payments</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                      <i class="ni ni-books"></i>
-                    </span>
-                    <small>Reports</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                      <i class="ni ni-pin-3"></i>
-                    </span>
-                    <small>Maps</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                      <i class="ni ni-basket"></i>
-                    </span>
-                    <small>Shop</small>
-                  </a>
-                </div>
-              </div>
             </li>
           </ul>
-          <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-            <li class="nav-item dropdown">
-              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="media align-items-center">
-                  <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="{{asset('assets/img/theme/team-4.jpg')}}">
-                  </span>
-                  <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
-                  </div>
-                </div>
-              </a>
-              <div class="dropdown-menu  dropdown-menu-right ">
-                <div class="dropdown-header noti-title">
-                  <h6 class="text-overflow m-0">Welcome!</h6>
-                </div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-single-02"></i>
-                  <span>My profile</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-settings-gear-65"></i>
-                  <span>Settings</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-user-run"></i>
-                  <span>Logout</span>
-                </a>
-              </div>
-            </li>
+          <ul class="nav navbar-nav flex-child-menu menu-right">
+            <li><a href="#">Help</a></li>
+            <li class="loginLink"><a href="{{url('login')}}">LOG In</a></li>
+            <li class="btn signupLink"><a href="{{url('register')}}">sign up</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </nav>
+      <!-- search form -->
+    </div>
+
+  </header>
+  <!-- END | Header -->
+
+  @yield('content')
+  <!-- footer v2 section-->
+  <footer class="ht-footer full-width-ft">
+    <div class="row">
+      <div class="flex-parent-ft">
+        <div class="flex-child-ft item1">
+          <a href="{{url('/')}}"><img class="logo" src="{{asset('landing/images/logo1.png"')}} alt=""></a>
+				 <p>Ethiopia Addis Ababa<br>
+				Asko, Addis sefer</p>
+				<p>Call us: <a href=" #">(+251) 923760796</a></p>
+        </div>
+        <div class="flex-child-ft item2">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Musics</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="flex-child-ft item3">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div class="flex-child-ft item4">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Change password</a></li>
           </ul>
         </div>
       </div>
-    </nav>
-    <!-- Header -->
-    <!-- Header -->
+      <div class="ft-copyright">
+        <div class="ft-left">
+          <p><a target="_blank" href="#">አዋርድ</a></p>
+        </div>
+        <div class="backtotop">
+          <p><a href="#" id="back-to-top">Back to top <i class="ion-ios-arrow-thin-up"></i></a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer v2 section-->
 
-    @yield('content')
-  </div>
-  <!-- Argon Scripts -->
-  <!-- Core -->
-  <script src="{{asset('assets/vendor/jquery/dist/jquery.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/js-cookie/js.cookie.js')}}"></script>
-  <script src="{{asset('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
-  <!-- Optional JS -->
-  <script src="{{asset('assets/vendor/chart.js/dist/Chart.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
-  <!-- Argon JS -->
-  <script src="{{asset('assets/js/argon.js?v=1.2.0"></script>
+  <script src="{{asset('landing/js/jquery.js')}}"></script>
+  <script src="{{asset('landing/js/plugins.js')}}"></script>
+  <script src="{{asset('landing/js/plugins2.js')}}"></script>
+  <script src="{{asset('landing/js/custom.js')}}"></script>
 </body>
+
+<!-- homev2_light16:30-->
 
 </html>

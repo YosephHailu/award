@@ -56,7 +56,7 @@ class MovieController extends Controller
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('photo')->getClientOriginalExtension();
             $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-            $path = $request->file('photo')->storeAs('rComplaintUploads/', $fileNameToStore);
+            $path = $request->file('photo')->storeAs('public/uploads/movie/', $fileNameToStore);
         } else {
             $fileNameToStore = "placeholder.php";
         }
@@ -85,6 +85,7 @@ class MovieController extends Controller
     public function show(Movie $movie)
     {
         //
+        return view('movie.movie_detail')->with('movie', $movie);
     }
 
     /**
@@ -126,7 +127,7 @@ class MovieController extends Controller
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('photo')->getClientOriginalExtension();
             $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-            $path = $request->file('photo')->storeAs('rComplaintUploads/', $fileNameToStore);
+            $path = $request->file('photo')->storeAs('public/uploads/movie/', $fileNameToStore);
         } else {
             $fileNameToStore = $movie->image;
         }

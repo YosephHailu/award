@@ -1,7 +1,7 @@
 @extends('layouts.guest')
 
 @section('content')
-<div class="container pt-6">
+<div class="container pt-6" style="padding-top: 180px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

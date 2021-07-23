@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
+use App\Models\Music;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $movies = Movie::all();
+        $musics = Music::all();
+
+        return view('welcome')->with(['movies'=> $movies, 'musics' => $musics ]);
     }
     
     /**

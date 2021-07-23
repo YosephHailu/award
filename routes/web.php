@@ -3,7 +3,9 @@
 use App\Http\Controllers\AwardController;
 use App\Http\Controllers\AwardTypeController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\MovieVoteController;
 use App\Http\Controllers\MusicController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,14 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('landing');
 
 Auth::routes();
 
 Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, "logout"])->name('logout');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 
 Route::resource('awardType', AwardTypeController::class);
@@ -33,3 +33,5 @@ Route::get('award/{award}/candidates', [App\Http\Controllers\AwardController::cl
 
 Route::resource('music', MusicController::class);
 Route::resource('movie', MovieController::class);
+Route::get('movie/{movie}/castVote', [MovieVoteController::class, 'castVote'])->name('cast-vote');
+Route::get('users', [UserController::class, 'index']);
