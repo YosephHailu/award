@@ -37,6 +37,7 @@
 
 <body>
     <!-- Sidenav -->
+    @if (Auth::user()->hasRole('admin'))
     <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
         <div class="scrollbar-inner">
             <!-- Brand -->
@@ -51,7 +52,7 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{url('home')}}">
+                            <a class="nav-link active" href="{{url('dashboard')}}">
                                 <i class="ni ni-tv-2 text-primary"></i>
                                 <span class="nav-link-text">Dashboard</span>
                             </a>
@@ -93,6 +94,8 @@
             </div>
         </div>
     </nav>
+    @endif
+
     <!-- Main content -->
     <div class="main-content" id="panel">
         <!-- Topnav -->

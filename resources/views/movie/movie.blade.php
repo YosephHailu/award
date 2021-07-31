@@ -25,7 +25,7 @@
                     <th scope="row">
                         <div class="media align-items-center">
                             <a href="#" class="avatar rounded-circle mr-3">
-                                <img alt="Image placeholder" src="../../assets/img/theme/bootstrap.jpg">
+                                <img alt="Image placeholder" style="height: 45px" src="{{asset('storage/uploads/movie/' . $movie->image)}}">
                             </a>
                             <div class="media-body">
                                 <span class="name mb-0 text-sm">{{ $movie->name }}</span>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movie;
+use App\Models\MovieVote;
 use App\Models\Music;
+use App\Models\MusicVote;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('index');
     }
 
     /**
@@ -28,7 +30,7 @@ class HomeController extends Controller
         $movies = Movie::all();
         $musics = Music::all();
 
-        return view('welcome')->with(['movies'=> $movies, 'musics' => $musics ]);
+        return view('landing')->with(['movies'=> $movies, 'musics' => $musics ]);
     }
     
     /**
@@ -38,6 +40,17 @@ class HomeController extends Controller
      */
     public function dashboard()
     {
-        return view('dashboard');
+        $movieVotes = MovieVote::all();
+        $musicVotes = MusicVote::all();
+
+        return view('dashboard')->with(['movieVotes'=> $movieVotes, 'musicVotes' => $musicVotes ]);
+    }
+    
+    public function home()
+    {
+        $movies = Movie::all();
+        $musics = Music::all();
+
+        return view('home')->with(['movies'=> $movies, 'musics' => $musics ]);
     }
 }

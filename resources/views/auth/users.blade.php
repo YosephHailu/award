@@ -11,7 +11,8 @@
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                     <th scope="col text-center">
-                        <a href="{{ url('movie/create')}}" class="btn btn-primary text-white mx-auto">ADD OWNER</a>
+                        <a href="{{ url('updateAllUserStatus')}}?status=false" class="btn btn-danger text-white mx-auto">DEACTIVATE ALL</a>
+                        <a href="{{ url('updateAllUserStatus')}}?status=true" class="btn btn-success text-white mx-auto">ACTIVATE ALL</a>
                     </th>
                 </tr>
             </thead>
@@ -32,7 +33,7 @@
                     <td>{{$user->phone}}</td>
                     <td>{{$user->email}}</td>
                     <td class="text-center">
-                        <a href="" class="btn btn-danger">Deactivate</a>
+                        <a href="{{url('updateUserStatus/'. $user->id)}}" class="btn btn-{{$user->status ? 'success' : 'danger'}}">{{$user->status ? 'Activate' : 'Deactivate'}}</a>
                         <a href="{{url("user/$user->id/edit")}}" class="btn btn-success">Edit</a>
 
                     </td>

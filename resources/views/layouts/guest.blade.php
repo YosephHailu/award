@@ -31,16 +31,7 @@
 
 </head>
 
-<body>
-  <!--preloading-->
-  {{-- <div id="preloader">
-    <img class="logo" src="{{asset('landing/images/logo1.png"')}} alt="" width="119" height="58">
-  <div id="status">
-    <span></span>
-    <span></span>
-  </div>
-  </div> --}}
-  <!--end of preloading-->
+<body>>
   <!--login form popup-->
   <div class="login-wrapper" id="login-content">
     <div class="login-content">

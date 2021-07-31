@@ -26,13 +26,14 @@ class MovieVoteController extends Controller
      */
     public function castVote(Movie $movie)
     {
-        $movieVote = MovieVote::create([
+        $movieVote = MovieVote::updateOrCreate([
+            'user_id' => Auth::id(),
+        ], [
             'date' => Carbon::now(),
             'movie_id' => $movie->id,
-            'user_id' => Auth::id(),
         ]);
 
-        return redirect("movie/$movie->id");
+        return back()->with('success', "Vote successfully casted");
         //
     }
 }
