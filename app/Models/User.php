@@ -48,13 +48,13 @@ class User extends Authenticatable
     
     public function hasVoted($movie)
     {
-        return $this->movieVote->movie_id ?? 0 == $movie->id;
+        return ($this->movieVote->movie_id ?? 0) == $movie->id;
     }
     
     
     public function hasVotedMusic($music)
     {
-        return $this->musicVote->music_id ?? 0 == $music->id;
+        return ($this->musicVote->music_id ?? 0) == $music->id;
     }
 
     

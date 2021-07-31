@@ -70,11 +70,19 @@
                                 <span class="nav-link-text">Musics</span>
                             </a>
                         </li>
+                        
                     </ul>
                     <!-- Divider -->
                     <hr class="my-3">
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('grading')}}">
+                                <i class="ni ni-planet text-orange"></i>
+                                <span class="nav-link-text">Grading</span>
+                            </a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link"
                                 href="{{ url('users')}}">

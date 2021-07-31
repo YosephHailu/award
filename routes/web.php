@@ -40,3 +40,4 @@ Route::get('movie/{movie}/castVote', [MovieVoteController::class, 'castVote'])->
 Route::get('users', [UserController::class, 'index']);
 Route::get('updateUserStatus/{user}', [UserController::class, 'updateStatus']);
 Route::get('updateAllUserStatus', [UserController::class, 'updateAllUserStatus']);
+Route::get('grading', [AwardController::class, 'grading']);
