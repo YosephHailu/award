@@ -21,7 +21,6 @@ class CreateAwardsTable extends Migration
             $table->longText('description');
             $table->integer('allowed_no_of_votes')->default(1);
 
-
             $table->string('logo')->default('placeholder.png');
             $table->string('cover_img')->default('placeholder.png');
             
