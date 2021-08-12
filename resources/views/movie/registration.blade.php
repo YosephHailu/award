@@ -32,20 +32,6 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="director" class="col-md-4 col-form-label text-md-right">Director</label>
-
-                            <div class="col-md-6">
-                                <input id="director" type="text" class="form-control @error('director') is-invalid @enderror" name="director" value="{{ $movie->director ?? old('director') }}" required autocomplete="director" autofocus>
-
-                                @error('director')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        
-                        <div class="form-group row">
                             <label for="producer" class="col-md-4 col-form-label text-md-right">Producer</label>
 
                             <div class="col-md-6">

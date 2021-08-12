@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+    <title>Award</title>
     <!-- Favicon -->
     <link rel="icon" href="{{asset('assets/img/brand/favicon.png')}}" type="image/png">
     <!-- Fonts -->
@@ -87,7 +87,7 @@
                             <a class="nav-link"
                                 href="{{ url('users')}}">
                                 <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Users</span>
+                                <span class="nav-link-text">Voters</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -192,7 +192,7 @@
     <script src="{{asset('assets/vendor/chart.js/dist/Chart.min.js')}}"></script>
     <script src="{{asset('assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
     <!-- Argon JS -->
-    <script src="{{asset('assets/js/argon.js?v=1.2.0"></script>
+    <script src="{{asset('assets/js/argon.js?v=1.2.0')}}"></script>
 </body>
 
 </html>

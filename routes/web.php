@@ -28,10 +28,6 @@ Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, "logout"
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 
-Route::resource('awardType', AwardTypeController::class);
-Route::resource('award', AwardController::class);
-Route::get('award/{award}/candidates', [App\Http\Controllers\AwardController::class, 'candidates'])->name('candidates');
-
 Route::resource('music', MusicController::class);
 Route::get('music/{music}/castVote', [MusicVoteController::class, 'castVote'])->name('music-cast-vote');
 

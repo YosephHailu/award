@@ -152,5 +152,8 @@ class MusicController extends Controller
     public function destroy(Music $music)
     {
         //
+        $music->delete();
+
+        return back()->with('success', 'Successfully Deleted !!');
     }
 }

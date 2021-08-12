@@ -21,8 +21,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::all();
-        return view('auth.users')->with('users', $users);
+        $users = User::where('role', 'voter');
+        return view('auth.users')->with('users', $users->get());
     }
     
     public function updateStatus(Request $request, User $user)

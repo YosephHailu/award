@@ -14,7 +14,7 @@
                     <th scope="col" class="sort" data-sort="status">Production</th>
                     <th scope="col" class="sort" data-sort="status">Released Date</th>
                     <th scope="col" class="sort" data-sort="status">Budget</th>
-                    <th scope="col">
+                    <th scope="col" style="min-width: 190px">
                         <a href="{{ url('movie/create')}}" class="btn btn-primary text-white">ADD AWARD</a>
                     </th>
                 </tr>
@@ -39,8 +39,17 @@
                     <td>{{$movie->production_company}}</td>
                     <td>{{$movie->released_date}}</td>
                     <td>{{$movie->budget}}</td>
-                    <td class="text-center">
-                        <a href="" class="btn btn-danger">Delete</a>
+                    <td class="text-center row">
+                        
+                        <form action="{{ url('movie/' . $movie->id) }}" class="pr-2" method="post">
+                            @csrf
+                            <input type="hidden" name="_method" value="delete">
+                            <button class="btn btn-danger" onclick="return confirm('Are you sure?')">
+                                Delete
+                            </button>
+                        </form>
+
+                        {{-- <a href="" class="btn btn-danger">Delete</a> --}}
                         <a href="{{url("movie/$movie->id/edit")}}" class="btn btn-success">Edit</a>
 
                     </td>

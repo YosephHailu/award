@@ -156,6 +156,9 @@ class MovieController extends Controller
     public function destroy(Movie $movie)
     {
         //
+        $movie->delete();
+
+        return back()->with('success', 'Successfully Deleted !!');
     }
 
     

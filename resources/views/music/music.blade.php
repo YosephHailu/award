@@ -51,10 +51,16 @@
                     <td class="budget">
                         {{$music->released_year}}
                     </td>
-                    <td class="text-center">
-                        <a href="" class="btn btn-danger">Delete</a>
-                        <a href="{{url("music/$music->id/edit")}}" class="btn btn-success">Edit</a>
+                    <td class="text-center row">
+                        <form action="{{ url('music/' . $music->id) }}" class="pr-2" method="post">
+                            @csrf
+                            <input type="hidden" name="_method" value="delete">
+                            <button class="btn btn-danger" onclick="return confirm('Are you sure?')">
+                                Delete
+                            </button>
+                        </form>
 
+                        <a href="{{url("music/$music->id/edit")}}" class="btn btn-success">Edit</a>
                     </td>
                 </tr>
                 @endforeach
