@@ -37,3 +37,9 @@ Route::get('users', [UserController::class, 'index']);
 Route::get('updateUserStatus/{user}', [UserController::class, 'updateStatus']);
 Route::get('updateAllUserStatus', [UserController::class, 'updateAllUserStatus']);
 Route::get('grading', [AwardController::class, 'grading']);
+
+// Route::get('/galleruse','ImageController@index')->name('image.index');
+Route::get('/gallery',[App\Http\Controllers\ImageController::class, 'index'])->name('image.index');
+// Route::get('/gallery', '[App\Http\ControllersImagesController::class, 'index']);
+Route::get('/album/create',[App\Http\Controllers\ImageController::class, 'create'])->name('image.create');
+Route::post('/album/store',[App\Http\Controllers\ImageController::class, 'store'])->name('image.store');
