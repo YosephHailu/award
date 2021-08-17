@@ -6,7 +6,7 @@
     .card-stats {
         background-size: cover;
         transition: all 4s;
-        height: 150px;
+        height: 180px;
     }
 
     .card-stats:hover {
@@ -40,7 +40,7 @@
                                             <div class="col">
                                                 <h5 class="card-title text-uppercase text-white mb-0">{{$movie->name}}
                                                 </h5>
-                                                <span class="h2 font-weight-bold mb-0">350,897</span>
+                                                <span class="h2 font-weight-bold mb-0">{{$movie->movieVote ? $movie->movieVote->count() : 0}} Votes</span>
                                             </div>
                                             <div class="col-auto">                                                
                                                 @if (Auth::user()->hasVoted($movie))
@@ -51,10 +51,20 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <p class="mt-3 mb-0 text-sm">
-                                            <span class="text-white mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                        <div class="row">
+                                            <p class="mt-3 mb-0 text-sm">
+                                                <span class="text-dark mr-2 "><i class="fa fa-arrow-right"></i> Director</span> : 
+                                                <span class="text-nowrap">{{$movie->director}}</span>
+                                            </p>
+                                            <p class="mb-0 text-sm">
+                                                <span class="text-dark mr-2 "><i class="fa fa-arrow-right"></i> Producer</span> : 
+                                                <span class="text-nowrap">{{$movie->producer}}</span>
+                                            </p>
+                                            <p class="mb-0 text-sm">
+                                                <span class="text-dark mr-2 "><i class="fa fa-arrow-right"></i> Genre</span> : 
+                                                <span class="text-nowrap">{{$movie->genre}}</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -80,9 +90,9 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col">
-                                                <h5 class="card-title text-uppercase text-white mb-0">{{$music->name}}
+                                                <h5 class="card-title text-uppercase text-white mb-0">{{$music->title}}
                                                 </h5>
-                                                <span class="h2 font-weight-bold mb-0">350,897</span>
+                                                <span class="h2 font-weight-bold mb-0">{{$music->musicVote ? $music->musicVote->count() : '0'}} Votes</span>
                                             </div>
                                             <div class="col-auto">                                                
                                                 @if (Auth::user()->hasVotedMusic($music))
@@ -93,10 +103,20 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <p class="mt-3 mb-0 text-sm">
-                                            <span class="text-white mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                        <div class="row">
+                                            <p class="mt-3 mb-0 text-sm">
+                                                <span class="text-dark mr-2 "><i class="fa fa-arrow-right"></i> Singer Name</span> : 
+                                                <span class="text-nowrap">{{$music->singer_name}}</span>
+                                            </p>
+                                            <p class="mb-0 text-sm">
+                                                <span class="text-dark mr-2 "><i class="fa fa-arrow-right"></i> Producer</span> : 
+                                                <span class="text-nowrap">{{$music->producer}}</span>
+                                            </p>
+                                            <p class="mb-0 text-sm">
+                                                <span class="text-dark mr-2 "><i class="fa fa-arrow-right"></i> Genre</span> : 
+                                                <span class="text-nowrap">{{$music->genre}}</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
