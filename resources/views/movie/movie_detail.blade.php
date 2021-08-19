@@ -1,7 +1,21 @@
-@extends('layouts.guest')
+@extends('layouts.app')
 
 @section('content')
 <style>
+    .dangerbtn {
+        font-family: 'Dosis', sans-serif;
+        font-size: 14px;
+        color: #abb7c4;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 13px 25px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #969293
+    }
+    
     .greenbtn {
         font-family: 'Dosis', sans-serif;
         font-size: 14px;
@@ -22,7 +36,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="movie-img sticky-sb">
-                    <img src="{{asset('storage/uploads/movie/' . $movie->image)}}" alt="" style="height: 450px">
+                    <img src="{{asset('storage/uploads/movie/' . $movie->image)}}" alt="" style="height: 350px; width: 350px">
                     <div class="movie-btn col-12">
                         <div class="red col-12">
                             <div class="col-12">
@@ -31,9 +45,12 @@
                                 <a href="{{url("movie/$movie->id/castVote")}}" class="item redbtn col-12"> <i
                                         class="ion-play"></i> Vote</a>
                                 @else
-                                <a class="item greenbtn col-12"> <i
+                                <a class="item greenbtn col-12 text-white"> <i
                                         class="ion-play"></i> Voted</a>
                                 @endif
+                                
+                                <a href="{{url('home')}}" class="item dangerbtn float-right text-white" style="margin-top: -10px"> <i
+                                    class="ion-play"></i> Cancel</a>
                             </div>
                         </div>
                     </div>
@@ -58,20 +75,6 @@
                             </div>
 
                             <p>{{$movie->description}}</p>
-                            <div class="title-hd-sm">
-                                <h4>cast</h4>
-                                <a href="#" class="time">Full Cast & Crew <i class="ion-ios-arrow-right"></i></a>
-                            </div>
-                            <!-- movie cast -->
-                            <div class="mvcast-item">
-                                <div class="cast-it">
-                                    <div class="cast-left">
-                                        <img src="images/uploads/cast1.jpg" alt="">
-                                        <a href="#">Robert Downey Jr.</a>
-                                    </div>
-                                    <p>... Robert Downey Jr.</p>
-                                </div>
-                            </div>
                         </div>
                         <div class="col-md-4 col-xs-12 col-sm-12">
                             <div class="sb-it">
